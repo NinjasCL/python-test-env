@@ -1,0 +1,68 @@
+# Python Testing Environment
+
+This is a simple environment for testing out
+_Python_ scripts. Ideally for studing algorithms and data structures.
+
+## Requirements
+
+- https://www.docker.com/[Docker]
+- https://en.wikipedia.org/wiki/Makefile[Make]
+
+## Available Tools
+
+- https://github.com/docker-library/python/tree/master/3.8[Python 3.8]
+- https://docs.pytest.org/en/stable/getting-started.html[pytest]
+- https://github.com/psf/black[black]
+- https://pypi.org/project/typing-extensions/[typing-extensions]
+
+## Usage
+
+### Makefile
+
+All the commands are inside this file. You can modify
+`IMAGE` and `RUN` variables to suit your needs.
+
+### `$ make build`
+
+This command will create the `container`.
+
+### `$ make format`
+
+This command will execute _Black_ code formatter.
+
+### `$ make run`
+
+This command will execute _Python_ REPL inside the container.
+
+### `$ make shell`
+
+This command will enter the _Bash_ shell inside the container.
+
+### `$ make test`
+
+This command will execute _Pytest_ inside the container.
+
+### _Taskfile.sh_
+
+`Taskfile.sh` is a special file that helps running commands inside the container. To execute it first use `$ make shell` to enter the container. Then you can use `run` to execute commands defined in `Taskfile.sh`.
+
+#### `$ run test`
+
+Runs _Pytest_.
+
+#### `$ run test:file <file>`
+
+Runs _Pytest_ on a file named `test/test_<file>.py`
+
+#### `$ run test:file:fn <file> "<keywords>"`
+
+Runs _Pytest_ on a file named `test/test_<file>.py` and execute all the methods wich contains the words inside "<keywords>".
+
+See https://docs.pytest.org/en/latest/example/index.html
+
+
+++++
+Made with <i class="fa fa-heart">&#9829;</i> by <a href="https://ninjas.cl" target="_blank">Ninjas.cl</a>.
+++++
+
+
