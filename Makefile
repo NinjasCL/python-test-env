@@ -5,6 +5,9 @@ b build:
 	docker build -f Dockerfile -t $(IMAGE) .
 f format:
 	$(RUN) black .
+g github:
+	make build
+	make test
 r run:
 	$(RUN)
 s shell:
