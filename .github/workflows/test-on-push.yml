@@ -1,11 +1,9 @@
-name: Docker Image CI
-
+name: docker-ci
 on: [push]
-
 jobs:
   testing:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v1
       - name: Building testing environment
-        run: make github
+      - run: make github
