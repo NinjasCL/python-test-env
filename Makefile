@@ -1,5 +1,5 @@
 IMAGE = ninjas-py-env
-RUN = docker run --rm -it --mount src="$(shell pwd)/src",target=/src,type=bind $(IMAGE)
+RUN = docker run --rm -it --mount src="./src",target=/src,type=bind $(IMAGE)
 
 b build:
 	docker build -f Dockerfile -t $(IMAGE) .
