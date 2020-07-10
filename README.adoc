@@ -3,7 +3,7 @@
 This is a simple environment for testing out
 _Python_ scripts. Ideally for studing algorithms and data structures.
 
-image:https://github.com/ninjascl/python-test-env/workflows/docker-ci/badge.svg[]
+image:https://github.com/ninjascl/python-test-env/workflows/test-on-push.yml/badge.svg[]
 
 ## Requirements
 
